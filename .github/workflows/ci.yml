@@ -13,12 +13,14 @@ on:
 jobs:
   frontend:
     runs-on: ubuntu-latest
+    env:
+      NG_CLI_ANALYTICS: "false"
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: "24"
           cache: "npm"
           cache-dependency-path: package-lock.json
 
@@ -26,4 +28,4 @@ jobs:
       - run: npm run lint:check
       - run: npm run format:check
       - run: npm run build -- --configuration production
-      - run: npm test -- --run
+      - run: npm test -- --watch=false

@@ -1,0 +1,5 @@
+azure_subscription_id = "83ab56f5-88ee-436d-87a5-994d3185bf00"
+github_owner          = "mechanicshop"
+web_repository_name   = "mechanicshop-web"
+git_branch            = "main"
+github_token          = "ghp_your_token_here"
