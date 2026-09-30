@@ -1,0 +1,57 @@
+@use '@angular/material' as mat;
+
+$theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$orange-palette,
+    ),
+    typography: (
+      brand-family: 'Plus Jakarta Sans',
+      plain-family: 'Plus Jakarta Sans',
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
+
+html {
+  @include mat.theme($theme);
+
+  @include mat.theme-overrides(
+    (
+      primary: var(--brand-primary),
+      on-primary: var(--brand-bg),
+      primary-container: var(--brand-primary-container),
+      on-primary-container: var(--brand-on-primary-container),
+      // Surfaces — matches --color-bg, --color-surface, --color-surface-elevated
+      background: var(--brand-bg),
+      on-background: var(--brand-ink),
+      surface: var(--brand-surface),
+      on-surface: var(--brand-ink),
+      surface-variant: var(--brand-surface-elevated),
+      on-surface-variant: var(--brand-muted),
+      // Outline — derived from --color-muted
+      outline: var(--brand-outline),
+      outline-variant: var(--brand-outline-variant),
+      // Error / danger — matches --color-danger
+      error: var(--brand-danger),
+      on-error: var(--brand-bg),
+      error-container: var(--brand-error-container),
+      on-error-container: var(--brand-on-error-container),
+    )
+  );
+}
+
+@include mat.all-component-themes($theme);
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-background);
+  color: var(--mat-sys-on-background);
+  font: var(--mat-sys-body-medium);
+  font-family: var(--font-sans);
+  margin: 0;
+  height: 100%;
+}

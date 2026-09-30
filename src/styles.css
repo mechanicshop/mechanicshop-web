@@ -1,0 +1,234 @@
+@layer reset, base, components;
+
+:root {
+  /* Brand & semantic colors */
+  --brand-bg: #fff;
+  --brand-surface: #fafafa;
+  --brand-surface-elevated: #211414;
+  --brand-ink: #141414;
+  --brand-primary: #e65c00;
+  --brand-primary-container: #ffebd6;
+  --brand-on-primary-container: #4d1a00;
+  --brand-accent: #9c4100;
+  --brand-muted: #8c8c8c;
+  --brand-success: #1b8a5a;
+  --brand-warning: #b58900;
+  --brand-danger: #c62828;
+  --brand-error-container: #ffebee;
+  --brand-on-error-container: #510c0f;
+  --brand-info: #0288d1;
+
+  /* Outlines */
+  --brand-outline: rgb(140 140 140 / 35%);
+  --brand-outline-variant: rgb(140 140 140 / 12%);
+
+  /* Map colors to standard CSS variables */
+  --color-bg: var(--brand-bg);
+  --color-surface: var(--brand-surface);
+  --color-surface-elevated: var(--brand-surface-elevated);
+  --color-ink: var(--brand-ink);
+  --color-primary: var(--brand-primary);
+  --color-primary-container: var(--brand-primary-container);
+  --color-on-primary-container: var(--brand-on-primary-container);
+  --color-accent: var(--brand-accent);
+  --color-muted: var(--brand-muted);
+  --color-success: var(--brand-success);
+  --color-warning: var(--brand-warning);
+  --color-danger: var(--brand-danger);
+  --color-error-container: var(--brand-error-container);
+  --color-on-error-container: var(--brand-on-error-container);
+  --color-info: var(--brand-info);
+  --color-outline: var(--brand-outline);
+  --color-outline-variant: var(--brand-outline-variant);
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Box shadows */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 6%);
+  --shadow-md: 0 4px 6px rgb(0 0 0 / 8%);
+  --shadow-lg: 0 10px 25px rgb(0 0 0 / 10%);
+  --shadow-xl: 0 20px 50px rgb(0 0 0 / 12%);
+
+  /* Spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  /* Motion easings */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Spacing aliases */
+  --space-xs: var(--spacing-xs);
+  --space-sm: var(--spacing-sm);
+  --space-md: var(--spacing-md);
+  --space-lg: var(--spacing-lg);
+  --space-xl: var(--spacing-xl);
+  --space-2xl: var(--spacing-2xl);
+  --space-3xl: var(--spacing-3xl);
+
+  /* Z-index scale */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
+
+@media (width > 767px) {
+  :root {
+    --fs-700: 2rem;
+    --fs-800: 3rem;
+    --fs-850: 3.5rem;
+    --fs-900: 5rem;
+    --fs-1000: 7.5rem;
+  }
+}
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    text-size-adjust: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  body {
+    min-block-size: 100vh;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  img,
+  picture {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  fieldset {
+    outline: none;
+    border: none;
+  }
+
+  ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  /* Layout container */
+  .container {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  @media (width <=1399px) {
+    .container {
+      max-width: 1140px;
+      padding-inline: 15px;
+    }
+  }
+
+  @media (width <=1199px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media (width <=991px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media (width <=767px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media (width <=575px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+
+  /* Shared Logo Typography */
+  .logo-text {
+    font-weight: 800;
+  }
+
+  /* Shared Page Layout styling */
+  .page-layout {
+    padding-block: 1.5rem;
+  }
+
+  /* Custom snackbar styles using CSS variables */
+  .success-snackbar {
+    --mdc-snackbar-container-color: var(--color-success) !important;
+    --mdc-snackbar-supporting-text-color: var(--color-bg) !important;
+    --mat-snack-bar-button-color: var(--color-bg) !important;
+  }
+
+  .error-snackbar {
+    --mdc-snackbar-container-color: var(--color-danger) !important;
+    --mdc-snackbar-supporting-text-color: var(--color-bg) !important;
+    --mat-snack-bar-button-color: var(--color-bg) !important;
+  }
+}

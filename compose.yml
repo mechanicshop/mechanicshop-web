@@ -1,0 +1,15 @@
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: mechanicshop-client
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped
+    environment:
+      NODE_ENV: Development
+      NG_ALLOWED_HOSTS: "localhost,localhost:4200,127.0.0.1,127.0.0.1:4200"
+    ports:
+      - "${CLIENT_PORT:-4200}:4200"
