@@ -1,33 +1,12 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
-provider "registry.terraform.io/dopplerhq/doppler" {
-  version     = "1.13.0"
-  constraints = "~> 1.13.0"
-  hashes = [
-    "h1:aZYITIkiL1/4JZlkyznXekp8Cr/i4FRrMr1GFY7psO8=",
-    "zh:07f501e4d90b63e044afba3959914db6ee6a318b431400b573a948e19ee93f6c",
-    "zh:0a8e15619065b87067a16d440033f1f3fdb97e872e2bebc91620a5b7a66ed558",
-    "zh:18029f97da036fd8d3ad3bb920802eabdd674f5462a56135c14ae3818bb5fa7c",
-    "zh:38da813b6311afe2f1615ac0f6171cf466cac149c1dea4a82ea434c9cc7cc0e7",
-    "zh:4499eb18120f2d44f8e3bd8229845d6184380323d6b91dc58ca99195ba0c7f9b",
-    "zh:5ba79177b58f6f019ee5b3cce78cdc90295e155df593aeb2d9220565f8d78eb5",
-    "zh:9d8c4dbcaba45e98ae6cfa40d847b0c1fe97ced6c40a474d08e50405189cc113",
-    "zh:a727f65bec2213855309e1aa79e2ebfa6620d3f2830dd61e15b5c7e8645a7c9a",
-    "zh:c0941606cd655bb3165b51efb594205517b422d8ca2b75caad41e0917447401e",
-    "zh:c5d9d2d55f5b77fc2cfcc8d3bca53d9bf5288f590d192132be7d37a34f0b419d",
-    "zh:c95ed84df0f6aa822f8b0c6b12b80d94ab569bc4bca2b7f7c4e9fd7c24d3f0ab",
-    "zh:cd05ac90242566ced97fbd52a84f3619dae4c89b085699c088d7f34c5841f350",
-    "zh:d1c92443af7a7a7299081a91c4a8236f639b5270567683bde02db4311f99eb0f",
-    "zh:e9da7c0de47969de83d3328add356307a2d3eb871392b87c7de96d25d67087ef",
-  ]
-}
-
 provider "registry.terraform.io/hashicorp/azuread" {
   version     = "2.53.1"
   constraints = "~> 2.47"
   hashes = [
     "h1:0z/718jtR2TJHQQMMqi4nvd6XFPV/iA1jb/5fyAcn5o=",
+    "h1:7ZNdNGnUB6N6Z6St3COzRXFaghMEyYkZt7WyOCRKOqo=",
     "zh:162916b037e5133f49298b0ffa3e7dcef7d76530a8ca738e7293373980f73c68",
     "zh:1c3e89cf19118fc07d7b04257251fc9897e722c16e0a0df7b07fcd261f8c12e7",
     "zh:492931cea4f30887ab5bca36a8556dfcb897288eddd44619c0217fc5da2d57e7",
@@ -44,22 +23,22 @@ provider "registry.terraform.io/hashicorp/azuread" {
 }
 
 provider "registry.terraform.io/hashicorp/azurerm" {
-  version     = "4.1.0"
-  constraints = "4.1.0"
+  version     = "4.81.0"
+  constraints = "~> 4.3"
   hashes = [
-    "h1:qDmSr5+vMVdWmfBEaIwqSLo5ZLyYk7KYoJo5flny6lk=",
-    "zh:3f332bca3a8b7dc982e428e09c73862d1afda34c2ad7803e70d8ba7b9e2445fd",
-    "zh:66b7e4a7a4fd06e0a5a3a22b4f76bda48e50ed3dd26c388738d9cc882b801bce",
-    "zh:6a271175d6e079241f24129f5026e0b16f04e7a548807f115600003d615e0ec3",
-    "zh:7a6abc7e2ae8d1041d0446bbe87156e0436639676ee1fad40321e8ee6759a454",
-    "zh:903f6e7f03e5952347ce6ee589d58c829179f2f22220f25cf52ae4efecd7053c",
-    "zh:a572b9834cf3b51799c82c5009705c59309d947a6ecdb7e17729868c55e7d0e0",
-    "zh:a7fca14338f0cfb82b17ce085400c210cbc986a87086702e3a11efcb4e53d6e4",
-    "zh:af36c7004702b0a273794914a17a77af1eb972caaad64e0068739e55c1488845",
-    "zh:b36f308db1cdc02dee659e3e518186d7dec970d88b6149be3f6b3f8d544e4282",
-    "zh:bedf6d13cf4bccc128d8cbb0703a3a8b547629674439ffda5e73563ab775d0f7",
-    "zh:d1df286a2e5d4a5f6a7f4d29700a25588167ccffa31c686550ef617503df3254",
-    "zh:f569b65999264a9416862bca5cd2a6177d94ccb0424f3a4ef424428912b9cb3c",
+    "h1:4BEgtU/crlkbMduT7tm8Sp3+C+1RBfrpUIlTBM/wtMc=",
+    "zh:0732e7b74264ddfa2b90ba69d01c283d3cbae9f72ed3e506c6ac92529fed7fd3",
+    "zh:12afb524e232fe4e3d6161927724af5dfa4831d71edd9c174917ca9b7377bfae",
+    "zh:169d619ae202c4145e02fb706fb7c3679445ab3e3ff722edbf89597517a8c92e",
+    "zh:6beb95a3ef2f2d9c76abaa48e5450e90686a3fb6a47f1cb0ff7c5e94b6960151",
+    "zh:705e075fb5ffc4bf66fd7cbabf1a65007a41621e80030a2c158a4c83b6046216",
+    "zh:78d5eefdd9e494defcb3c68d282b8f96630502cac21d1ea161f53cfe9bb483b3",
+    "zh:79a8d17fefe647040fcb9ee8821a4f09f395427c4fd49493489b9a93a9a1038e",
+    "zh:8cc3f900b3774c0ae37ae42365c4579a199cf9e5edf88e476fdf5ab1048f84ea",
+    "zh:dec373b9390fa95e257291acd018ed65a7d512b428645d35e22cdbe8b245a08b",
+    "zh:e60f1e9fb45df6defade2855ed6e68547409ea75d30655c556adb0c08579749b",
+    "zh:f901d12ec82f3f8b5880a27b5cbcd7bd0d97e60c9367a2d7ed82fdd1157b39ff",
+    "zh:facf68ea5bf0f2b8ba720e7fba5f86492e1d4c591100460bb91c3f79f391f4b6",
   ]
 }
 
@@ -68,6 +47,7 @@ provider "registry.terraform.io/integrations/github" {
   constraints = "~> 6.0"
   hashes = [
     "h1:2kD+4leuV8tBBXv+EPeehmfW6cDhIzVki61OXsGCtRI=",
+    "h1:RhCWa2aaFVKF/HzeR0fkIxZmoJvkGrv07hE0z09aPQs=",
     "zh:0ab29fc21699f34345cf0bbbe44745fd1b143b7c73b410c1dc4abe05ffad0a84",
     "zh:1aed10d06755d420bb3a893bf548ab2932297a9d094c04c5a8501e949ca186ed",
     "zh:2a6a11c21eae408055f45b9533c07afd2e845f6d496fd1b645aec2e873012103",

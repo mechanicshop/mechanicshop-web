@@ -28,3 +28,15 @@ variable "github_token" {
   sensitive   = true
   default     = null
 }
+
+variable "custom_domains" {
+  type        = list(string)
+  description = "Custom domain names to bind to the client Container App"
+  default     = ["mechanicshop.tech", "www.mechanicshop.tech"]
+}
+
+variable "enable_custom_domain" {
+  type        = bool
+  description = "Set to true after configuring DNS records (A, CNAME, and asuid TXT) in the get.tech dashboard"
+  default     = true
+}

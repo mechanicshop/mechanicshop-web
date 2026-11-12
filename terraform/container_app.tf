@@ -36,7 +36,7 @@ resource "azurerm_container_app" "client" {
       }
       env {
         name  = "NG_ALLOWED_HOSTS"
-        value = "mechanic-shop-client.purpleforest-454b82e9.swedencentral.azurecontainerapps.io"
+        value = "mechanicshop.tech,www.mechanicshop.tech,mechanic-shop-client.purpleforest-454b82e9.swedencentral.azurecontainerapps.io"
       }
     }
   }
@@ -57,7 +57,6 @@ resource "azurerm_container_app" "client" {
       template[0].container[0].liveness_probe,
       template[0].container[0].readiness_probe,
       template[0].container[0].startup_probe,
-      template[0].container[0].env,
       secret,
       registry
     ]

@@ -34,3 +34,24 @@ import {
   to = github_actions_secret.web_azure_subscription_id
   id = "mechanicshop-web:AZURE_SUBSCRIPTION_ID"
 }
+
+# 4. Existing Custom Domains & Managed Certificates - Client
+import {
+  to = azurerm_container_app_environment_managed_certificate.client_cert["mechanicshop.tech"]
+  id = "/subscriptions/83ab56f5-88ee-436d-87a5-994d3185bf00/resourceGroups/quiz-nova-resource-group/providers/Microsoft.App/managedEnvironments/quiznova-env/managedCertificates/mechanicshop-tech-mc"
+}
+
+import {
+  to = azurerm_container_app_environment_managed_certificate.client_cert["www.mechanicshop.tech"]
+  id = "/subscriptions/83ab56f5-88ee-436d-87a5-994d3185bf00/resourceGroups/quiz-nova-resource-group/providers/Microsoft.App/managedEnvironments/quiznova-env/managedCertificates/www-mechanicshop-tech-mc"
+}
+
+import {
+  to = azurerm_container_app_custom_domain.client_domain["mechanicshop.tech"]
+  id = "/subscriptions/83ab56f5-88ee-436d-87a5-994d3185bf00/resourceGroups/mechanic-shop-rg/providers/Microsoft.App/containerApps/mechanic-shop-client/customDomainName/mechanicshop.tech"
+}
+
+import {
+  to = azurerm_container_app_custom_domain.client_domain["www.mechanicshop.tech"]
+  id = "/subscriptions/83ab56f5-88ee-436d-87a5-994d3185bf00/resourceGroups/mechanic-shop-rg/providers/Microsoft.App/containerApps/mechanic-shop-client/customDomainName/www.mechanicshop.tech"
+}

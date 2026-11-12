@@ -3,3 +3,5 @@ github_owner          = "mechanicshop"
 web_repository_name   = "mechanicshop-web"
 git_branch            = "main"
 github_token          = "ghp_your_token_here"
+custom_domains        = ["mechanicshop.tech", "www.mechanicshop.tech"]
+enable_custom_domain  = true
