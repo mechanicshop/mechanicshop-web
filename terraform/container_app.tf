@@ -5,17 +5,6 @@ resource "azurerm_container_app" "client" {
   revision_mode                = "Single"
   workload_profile_name        = "Consumption"
 
-  secret {
-    name  = "ghcr-pull-secret"
-    value = var.github_token
-  }
-
-  registry {
-    server               = "ghcr.io"
-    username             = "moamenelbarky"
-    password_secret_name = "ghcr-pull-secret"
-  }
-
   template {
     min_replicas = 0
     max_replicas = 1
@@ -56,9 +45,7 @@ resource "azurerm_container_app" "client" {
       template[0].container[0].image,
       template[0].container[0].liveness_probe,
       template[0].container[0].readiness_probe,
-      template[0].container[0].startup_probe,
-      secret,
-      registry
+      template[0].container[0].startup_probe
     ]
   }
 }
